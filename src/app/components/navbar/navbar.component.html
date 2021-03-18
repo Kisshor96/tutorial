@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="logo">
+        <a href=""><img src="../assets/google.jpg" alt="logo" height="100" width="150"></a>
+    </div>
+    <div class="backMenu" >
+        <a routerLink="{{backmenuAccess.url}}" *ngIf="backmenuAccess.text" class="back"> &lt; {{backmenuAccess.text}}</a>
+    </div>
+    <div class="menuBlock" *ngIf="menuAccess">
+        <app-menu></app-menu>
+    </div>
+    <div class="LoggerBlock" *ngIf="loggerAccess">
+        <button *ngIf="!loggedUser" class="btn btn-outline-primary" routerLink="login">Sign In</button>
+        <ul *ngIf="loggedUser">
+            <li>
+                Welcome <strong class="text-primary">{{loggedUser}}</strong>
+            </li>
+            <li>
+                <a class="nav-link" (click)="logout()"><i class="fas fa-unlock"></i> Logout</a>
+            </li>
+        </ul>
+    </div>
+    <div class="contactsBlock" *ngIf="contactAccess">
+        <a href="#"><i class="fas fa-envelope"></i> kk2021@gmail.com</a>
+        <a href="#"><i class="fas fa-phone"></i> 0987654321</a>
+    </div>
+</div>

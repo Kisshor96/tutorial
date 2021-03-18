@@ -1,0 +1,15 @@
+.backMenu {
+    border: 1px solid red;
+}
+
+.menuBlock {
+    border: 1px solid green;
+}
+
+.LoggerBlock {
+    border: 1px solid blue;
+}
+
+.contactsBlock {
+    border: 1px solid yellow;
+}
